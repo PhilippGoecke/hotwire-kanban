@@ -57,6 +57,7 @@ export default class extends Controller {
     const id = item.dataset.sortableId;
     const newColumnId = to.closest('.board-column').dataset.sortableColumnIdValue;
     const url = this.urlValue.replace(":id", id);
+    url = url.replace(":board", id);
 
     const card = {
       position: newIndex + 1,
